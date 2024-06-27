@@ -15,6 +15,10 @@
                 width: 100vw;
                 height: 100vh;
             }
+            table, th, td {
+                /* padding: 0 0.25%; */
+                border-collapse: collapse;
+            }
             .container {
                 width: 100%;
                 height: 100%;
@@ -113,20 +117,20 @@
                 padding: 1%;
                 font-size: 1.25em;
                 flex: 1;
-                border: 1px solid black;
+                /* border: 1px solid black; */
 
             }
             .offnav-body {
                 flex: 1;
-                padding: 1%;
-                border: 1px solid black;
+                padding: 1% 0;
+                /* border: 1px solid black; */
 
                 /* background-color: #f4e4d7; */
                 ul {
                     list-style-type: none;
                     /* background-color: #f4e4d7; */
                     li {
-                        padding: 3%;
+                        padding: 3% 0;
                         a {
                             text-decoration: none;
                             color: black;
@@ -144,17 +148,18 @@
                 /* background: #f4e4d7; */
                 padding: 2%;
                 width: auto;
+                height: 100%;
                 /* animation: slide-up 0.5s ease; */
                 color: black;
                 position: relative;
                 display: flex;
                 flex-direction: column;
-                border: 1px solid black;
+                /* border: 1px solid black; */
             }
             .offnav-footer {
                 /* position: absolute; */
                 display: flex;
-                border: 1px solid black;
+                /* border: 1px solid black; */
                 flex: 1;
                 justify-content: center;
                 align-items: start;
@@ -163,7 +168,7 @@
                 .offnav-footer-item {
                     flex: 1;
                     margin: 1%;
-                    border: 1px solid black;
+                    /* border: 1px solid black; */
                 }
             }
             .offnav-close {
@@ -198,12 +203,14 @@
                 bottom: 0;
                 width: 100%;
                 height: 100%;
-                overflow: auto;
+                overflow-y: auto;
+                overflow-x: hidden;
                 background: white;
                 padding: 3%;
                 transform: translateY(0%);
                 animation: slideUp 0.6s ease-in-out;
                 animation-direction: alternate;
+                /* overflow: hidden; */
             }
             .slider-title {
                 padding: 16px;
@@ -211,6 +218,7 @@
             }
             .slider-body {
                 padding: 2px 16px;
+                height: 100%;
             }
             .slider-content {
                 position: relative;
@@ -226,6 +234,16 @@
                 font-size: 1.5em;
                 cursor: pointer;
                 font-weight: bold;
+            }
+            .slider-split {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .slider-split-item {
+                flex: 1;
+                padding: 1%;
             }
             .menu-category {
                 padding: 5% 0;
@@ -302,9 +320,28 @@
                 background-color: #27ae60;
                 transition: 0.2s ease;
             }
+            .contact-form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10%;
+                width: 60%;
+                height: 20%;
+                border: 1px solid black;
+            }
 
             #main-section {
-                background: url("img/background.jpg") no-repeat center center/cover;
+                background: url("img/background2.jpg") no-repeat center center/cover;
+            }
+
+            #access-map {
+                width: 100%;
+                max-height: 100%;
+                border: 0;
+                box-shadow: 10px 6px black;
+            }
+            .access-detail {
+                padding: 5%;
             }
 
             @keyframes slideUp {
@@ -386,10 +423,25 @@
                     </div>
                     <div class="offnav-footer">
                         <div class="offnav-footer-item">
-                            <p>&copy; 2021 The Little Room</p>
+                            <b>住所</b>
+                            <p>
+                                〒160-0014<br/>
+                                東京都新宿区<br/>
+                                内藤町1-2
+                            </p>
                         </div>
                         <div class="offnav-footer-item">
-                            <p>Powered by <a href=""></a></p>
+                            <b>営業時間</b>
+                            <table>
+                                <tr>
+                                    <td>平日</td>
+                                    <td>7:00 - 18:00</td>
+                                </tr>
+                                <tr>
+                                    <td>土曜日</td>
+                                    <td>9:00 - 15:00</td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -411,6 +463,31 @@
                     <div class="hero-title">
                         <h1>THE LITTLE ROOM</h1>
                         <!-- <p>美味しいよ</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="slider-page" id="access">
+                <div class="slider-content">
+                    <div class="slider-title">
+                        <a class="slider-close" onclick="toggleAccessSlider()">&times;</a>
+                        <h1>アクセス</h1>
+                        <span>どこにでも行けるよ</span>
+                    </div>
+                    <div class="slider-body">
+                        <div class="access-detail">
+                            <iframe id="access-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405.0734710134653!2d139.7149978260407!3d35.68715112019169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cebbbdb7a53%3A0xb7542f24ba99313!2z44CSMTYwLTAwMTQgVG9reW8sIFNoaW5qdWt1IENpdHksIE5haXTFjW1hY2hpLCAxLTIg44OV44Kp44Or44Og5YaF6Jek55S6!5e0!3m2!1sen!2sjp!4v1719492653606!5m2!1sen!2sjp" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="slider-split">
+                                <div class="slider-split-item">
+                                    <h2>住所</h2>
+                                    <p>〒160-0014<br/>東京都新宿区<br/>内藤町1-2</p>
+                                </div>
+                                <div class="slider-split-item">
+                                    <h2>駅から</h2>
+                                    <p><b>新宿御苑前駅</b>から　徒歩10分</p>
+                                    <p>四谷三丁目駅から　徒歩10分</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -572,6 +649,39 @@
                     </div>
                 </div>
             </div>
+            <div class="slider-page" id="contact">
+                <div class="slider-content">
+                    <div class="slider-title">
+                        <a class="slider-close" onclick="toggleContactSlider()">&times;</a>
+                        <h1>お問い合わせ</h1>
+                        <span>何か質問があれば、お気軽にお問い合わせください。</span>
+                    </div>
+                    <div class="slider-body" style="padding: 5%; display: flex; justify-content: center; align-items: center;">
+                        <div class="contact-form">
+                            <form action="">
+                                <table>
+                                    <tr>
+                                        <td>名前</td>
+                                        <td><input type="text" name="name" id="name"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>メールアドレス</td>
+                                        <td><input type="email" name="email" id="email"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>お問い合わせ内容</td>
+                                        <td><textarea name="message" id="message" cols="30" rows="10"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><button class="btn btn-default">送信</button></td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
     <script>
@@ -613,18 +723,18 @@
 
         // navbar slider
         function toggleNavbar() {
-            var orderSlider = document.getElementById('offnav');
+            var navbarSlider = document.getElementById('offnav');
             var offnavButton = document.getElementById('offnavButton');
-            if (orderSlider.style.display === 'none' || orderSlider.style.display === '') {
-                orderSlider.style.display = 'block';
-                orderSlider.style.animation = 'slideLeft 0.4s ease-out forwards';
+            if (navbarSlider.style.display === 'none' || navbarSlider.style.display === '') {
+                navbarSlider.style.display = 'block';
+                navbarSlider.style.animation = 'slideLeft 0.4s ease-in-out forwards';
                 offnavButton.style.color = 'black';
             } else {
-                orderSlider.style.animation = 'slideRight 0.4s ease-in forwards';
+                navbarSlider.style.animation = 'slideRight 0.4s ease-in-out forwards';
                 offnavButton.style.color = 'white';
-                orderSlider.addEventListener('animationend', function handler() {
-                    orderSlider.style.display = 'none';
-                    orderSlider.removeEventListener('animationend', handler);
+                navbarSlider.addEventListener('animationend', function handler() {
+                    navbarSlider.style.display = 'none';
+                    navbarSlider.removeEventListener('animationend', handler);
                     
                 }, { once: true });
             }
@@ -632,15 +742,43 @@
 
         // menu slider
         function toggleMenuSlider() {
-            var orderSlider = document.getElementById('menu');
-            if (orderSlider.style.display === 'none' || orderSlider.style.display === '') {
-                orderSlider.style.display = 'block';
-                orderSlider.style.animation = 'slideUp 0.4s ease-out forwards';
+            var menuSlider = document.getElementById('menu');
+            if (menuSlider.style.display === 'none' || menuSlider.style.display === '') {
+                menuSlider.style.display = 'block';
+                menuSlider.style.animation = 'slideUp 0.4s ease-in-out forwards';
             } else {
-                orderSlider.style.animation = 'slideDown 0.4s ease-in forwards';
-                orderSlider.addEventListener('animationend', function handler() {
-                    orderSlider.style.display = 'none';
-                    orderSlider.removeEventListener('animationend', handler);
+                menuSlider.style.animation = 'slideDown 0.4s ease-in-out forwards';
+                menuSlider.addEventListener('animationend', function handler() {
+                    menuSlider.style.display = 'none';
+                    menuSlider.removeEventListener('animationend', handler);
+                }, { once: true });
+            }
+        }
+
+        function toggleAccessSlider() {
+            var accessSlider = document.getElementById('access');
+            if (accessSlider.style.display === 'none' || accessSlider.style.display === '') {
+                accessSlider.style.display = 'block';
+                accessSlider.style.animation = 'slideUp 0.4s ease-in-out forwards';
+            } else {
+                accessSlider.style.animation = 'slideDown 0.4s ease-in-out forwards';
+                accessSlider.addEventListener('animationend', function handler() {
+                    accessSlider.style.display = 'none';
+                    accessSlider.removeEventListener('animationend', handler);
+                }, { once: true });
+            }
+        }
+
+        function toggleContactSlider() {
+            var contactSlider = document.getElementById('contact');
+            if (contactSlider.style.display === 'none' || contactSlider.style.display === '') {
+                contactSlider.style.display = 'block';
+                contactSlider.style.animation = 'slideUp 0.4s ease-in-out forwards';
+            } else {
+                contactSlider.style.animation = 'slideDown 0.4s ease-in-out forwards';
+                contactSlider.addEventListener('animationend', function handler() {
+                    contactSlider.style.display = 'none';
+                    contactSlider.removeEventListener('animationend', handler);
                 }, { once: true });
             }
         }
