@@ -1,0 +1,68 @@
+{
+    "drinks": {
+        "coffee": {
+            "name": "コーヒー",
+            "price": 150,
+            "description": "コーヒーです",
+            "image": "./img/items/drinks/coffee.jpg"
+        },
+        "espresso": {
+            "name": "エスプレッソ",
+            "price": 200,
+            "description": "エスプレッソです",
+            "image": "./img/items/drinks/espresso.jpg"
+        },
+        "latte": {
+            "name": "カフェラテ",
+            "price": 250,
+            "description": "カフェラテです",
+            "image": "./img/items/drinks/latte.jpg"
+        },
+        "cappuccino": {
+            "name": "カプチーノ",
+            "price": 300,
+            "description": "カプチーノです",
+            "image": "./img/items/drinks/cappuccino.jpg"
+        },
+        "mocha": {
+            "name": "モカ",
+            "price": 350,
+            "description": "モカです",
+            "image": "./img/items/drinks/mocha.jpg"
+        }
+    },
+    "foods": {
+        "sandwich": {
+            "name": "サンドイッチ",
+            "price": 500,
+            "description": "生ハムとチーズのサンドイッチ。カフェラテとの相性抜群です",
+            "image": "./img/items/foods/sandwich.jpg"
+        },
+        "cake": {
+            "name": "ケーキ",
+            "price": 400,
+            "description": "1個400円のケーキです。甘さ控えめです。",
+            "image": "./img/items/foods/cake.jpg"
+        },
+        "cookie": {
+            "name": "クッキー",
+            "price": 200,
+            "description": "チョコチップクッキーだよ。美味しい。",
+            "image": "./img/items/foods/cookie.jpg"
+        }
+    },
+    "products": {
+        "totebag": {
+            "name": "トートバッグ",
+            "price": 1000,
+            "description": "トートバッグです。カフェラテのロゴが入っています。",
+            "image": "./img/items/products/totebag.jpg"
+        },
+        "mug": {
+            "name": "マグカップ",
+            "price": 800,
+            "description": "",
+            "image": "./img/items/products/mug.jpg"
+        }
+    }
+}
