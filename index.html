@@ -328,6 +328,69 @@
                 width: 60%;
                 height: 20%;
                 border: 1px solid black;
+                box-shadow: 10px 6px black;
+                form {
+                    input, textarea {
+                        width: 100%;
+                        padding: 1%;
+                        margin: 1%;
+                        border: 1px solid black;
+                        border-radius: 5px;
+                    
+                    }
+                }
+            }
+
+            .staff-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                padding: 1% 5%;
+            }
+            .staff-member {
+                width: 30%;
+                margin: 1.5%;
+                border: 2px solid black;
+                box-shadow: 10px 5px black;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .staff-member:hover {
+                transform: scale(1.05);
+                transition: 0.2s ease;
+            }
+            .staff-image {
+                display: flex;
+                height: 100%;
+                padding: 2%;
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+            .staff-details {
+                width: 100%;
+                padding: 3%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .staff-name {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+                .staff-role {
+                    font-weight: lighter;
+                    padding: 1%;
+                }
+                .staff-bio {
+                    font-size: 0.75rem;
+                    font-weight: lighter;
+                }
             }
 
             #main-section {
@@ -337,11 +400,19 @@
             #access-map {
                 width: 100%;
                 max-height: 100%;
-                border: 0;
+                border: 1px solid black;
                 box-shadow: 10px 6px black;
             }
             .access-detail {
                 padding: 5%;
+            }
+
+            #slider-body-form {
+                padding: 5%; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center;
+                
             }
 
             @keyframes slideUp {
@@ -429,6 +500,12 @@
                                 東京都新宿区<br/>
                                 内藤町1-2
                             </p>
+                            <br>
+                            <b>連絡先</b>
+                            <p>
+                                <a href="tel:01-2345-6789">01-2345-6789</a>
+                                <a href="mailto:hello@littleroom.notreal">hello@littleroom.notreal</a>
+                            </p>
                         </div>
                         <div class="offnav-footer-item">
                             <b>営業時間</b>
@@ -462,7 +539,7 @@
                 <div class="hero">
                     <div class="hero-title">
                         <h1>THE LITTLE ROOM</h1>
-                        <!-- <p>美味しいよ</p> -->
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -475,7 +552,7 @@
                     </div>
                     <div class="slider-body">
                         <div class="access-detail">
-                            <iframe id="access-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405.0734710134653!2d139.7149978260407!3d35.68715112019169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cebbbdb7a53%3A0xb7542f24ba99313!2z44CSMTYwLTAwMTQgVG9reW8sIFNoaW5qdWt1IENpdHksIE5haXTFjW1hY2hpLCAxLTIg44OV44Kp44Or44Og5YaF6Jek55S6!5e0!3m2!1sen!2sjp!4v1719492653606!5m2!1sen!2sjp" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe id="access-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405.0734710134653!2d139.7149978260407!3d35.68715112019169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cebbbdb7a53%3A0xb7542f24ba99313!2z44CSMTYwLTAwMTQgVG9reW8sIFNoaW5qdWt1IENpdHksIE5haXTFjW1hY2hpLCAxLTIg44OV44Kp44Or44Og5YaF6Jek55S6!5e0!3m2!1sen!2sjp!4v1719492653606!5m2!1sen!2sjp" height="800" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             <div class="slider-split">
                                 <div class="slider-split-item">
                                     <h2>住所</h2>
@@ -513,7 +590,7 @@
                                         <p class="menu-item-description">アメリカ産のコーヒービーンを使っています</p>
                                     </div>
                                     <a class="menu-item-order" href="#" onclick="addToCart('Coffee');">
-                                        <span>注文</span>
+                                        <span>注文に追加する</span>
                                     </a>
                                 </div>
                                 <div class="menu-item" id="cappucino">
@@ -526,7 +603,7 @@
                                         <p class="menu-item-description">アメリカ産のコーヒービーンを使っています</p>
                                     </div>
                                     <a class="menu-item-order" href="#" onclick="addToCart('Cappucino');">
-                                        <span>注文</span>
+                                        <span>注文に追加する</span>
                                     </a>
                                 </div>
                                 <div class="menu-item" id="latte">
@@ -539,7 +616,7 @@
                                         <p class="menu-item-description">アメリカ産のコーヒービーンを使っています</p>
                                     </div>
                                     <a class="menu-item-order" href="#" onclick="addToCart('Latte')">
-                                        <span>注文</span>
+                                        <span>注文に追加する</span>
                                     </a>
                                 </div>
                                 <div class="menu-item" id="espresso">
@@ -552,7 +629,7 @@
                                         <p class="menu-item-description">アメリカ産のコーヒービーンを使っています</p>
                                     </div>
                                     <a class="menu-item-order" href="#" onclick="addToCart('Espresso')">
-                                        <span>注文</span>
+                                        <span>注文に追加する</span>
                                     </a>
                                 </div>
                                 <div class="menu-item" id="passion-tea">
@@ -565,7 +642,7 @@
                                         <p class="menu-item-description">涼しいみかんとグレープフルーツの味わい</p>
                                     </div>
                                     <a class="menu-item-order" href="#" onclick="addToCart('Passion Tea')">
-                                        <span>注文</span>
+                                        <span>注文に追加する</span>
                                     </a>
                                 </div>
                             </div>
@@ -583,7 +660,7 @@
                                         <p class="menu-item-description">イタリア産の生ハムと新鮮な野菜のサンドイッチ</p>
                                     </div>
                                     <a class="menu-item-order" href="#" onclick="addToCart('Sandwich')">
-                                        <span>注文</span>
+                                        <span>注文に追加する</span>
                                     </a>
                                 </div>
                                 <div class="menu-item" id="cake">
@@ -596,7 +673,7 @@
                                         <p class="menu-item-description">美味しいチョコレートケーキです　ー　店長のおすすめ</p>
                                     </div>
                                     <a class="menu-item-order" href="#" onclick="addToCart('Cake')">
-                                        <span>注文</span>
+                                        <span>注文に追加する</span>
                                     </a>
                                 </div>
                                 <div class="menu-item" id="cookie">
@@ -609,7 +686,7 @@
                                         <p class="menu-item-description">２個付き</p>
                                     </div>
                                     <a class="menu-item-order" href="#" onclick="addToCart('Cookies')">
-                                        <span>注文</span>
+                                        <span>注文に追加する</span>
                                     </a>
                                 </div>
                             </div>
@@ -627,7 +704,7 @@
                                         <p class="menu-item-description">持ち運びに便利なトートバッグ</p>
                                     </div>
                                     <a class="menu-item-order" href="#" onclick="addToCart('Tote bag')">
-                                        <span>注文</span>
+                                        <span>注文に追加する</span>
                                     </a>
                                 </div>
                             </div>
@@ -649,6 +726,49 @@
                     </div>
                 </div>
             </div>
+            <div class="slider-page" id="staff">
+                <div class="slider-content">
+                    <div class="slider-title">
+                        <a class="slider-close" onclick="toggleStaffSlider()">&times;</a>
+                        <h1>スタッフ</h1>
+                        <span>お店のスタッフを紹介します。</span>
+                    </div>
+                    <div class="slider-body">
+                        <div class="staff-list">
+                            <div class="staff-member" id="midori">
+                                <div class="staff-image">
+                                    <img src="img/staff/midori.jpg" alt="midori">
+                                </div>
+                                <div class="staff-details">
+                                    <h2 class="staff-name">緑</h2>
+                                    <p class="staff-role">店長</p>
+                                    <p class="staff-bio">コーーーーーーーーーーーーーヒーーーーーーーーー</p>
+                                </div>
+                            </div>
+                            <div class="staff-member" id="dan">
+                                <div class="staff-image">
+                                    <img src="img/staff/dan.jpg" alt="dan">
+                                </div>
+                                <div class="staff-details">
+                                    <h2 class="staff-name">だん</h2>
+                                    <p class="staff-role">店員</p>
+                                    <p class="staff-bio">子猫大好き</p>
+                                </div>
+                            </div>
+                            <div class="staff-member" id="ryosuke">
+                                <div class="staff-image">
+                                    <img src="img/staff/ryosuke.jpg" alt="ryosuke">
+                                </div>
+                                <div class="staff-details">
+                                    <h2 class="staff-name">亮介</h2>
+                                    <p class="staff-role">店員</p>
+                                    <p class="staff-bio">カフェインの大ファン</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="slider-page" id="contact">
                 <div class="slider-content">
                     <div class="slider-title">
@@ -656,17 +776,17 @@
                         <h1>お問い合わせ</h1>
                         <span>何か質問があれば、お気軽にお問い合わせください。</span>
                     </div>
-                    <div class="slider-body" style="padding: 5%; display: flex; justify-content: center; align-items: center;">
+                    <div class="slider-body" id="slider-body-form">
                         <div class="contact-form">
                             <form action="">
                                 <table>
                                     <tr>
                                         <td>名前</td>
-                                        <td><input type="text" name="name" id="name"></td>
+                                        <td><input type="text" name="name" id="name" placeholder="佐藤しぶや"></td>
                                     </tr>
                                     <tr>
                                         <td>メールアドレス</td>
-                                        <td><input type="email" name="email" id="email"></td>
+                                        <td><input type="email" name="email" id="email" placeholder="your@mail.com"></td>
                                     </tr>
                                     <tr>
                                         <td>お問い合わせ内容</td>
@@ -685,41 +805,6 @@
         </div>
     </body>
     <script>
-        // async function fetchItems() {
-        //     var menuItems = await fetch('./items.json')
-        //     const items = await menuItems.json();
-        //     console.log(items);
-        //     // items = JSON.parse(items);
-        //     return items;
-        // }
-
-        // function populateMenu(item) {
-        //     var menuItem = `
-        //         <div class="menu-item">
-        //             <div class="menu-item-image">
-        //                 <img src="${item.image}" alt="${item.name}">
-        //             </div>
-        //             <div class="menu-item-details">
-        //                 <h3>${item.name}</h3>
-        //                 <p>¥${item.price}</p>
-        //                 <button class="btn btn-default">注文</button>
-        //             </div>
-        //         </div>
-        //     `;
-        //     return menuItem;
-        // }
-
-        // function populateMenuList(items) {
-        //     var menuList = document.querySelector('.menu-list');
-            
-        //     for (var i = 0; i < items.length; i++) {
-        //         var item = items[i];
-        //         var menuItem = populateMenu(item);
-        //         menuList.innerHTML += menuItem;
-        //     }
-        // }
-
-        // // Slider pages
 
         // navbar slider
         function toggleNavbar() {
@@ -783,18 +868,19 @@
             }
         }
 
-        // order slider
-        // var orderSlider = document.getElementById('order');
-        // function openOrderSlider() {
-        //     orderSlider.style.display = 'block';
-        //     orderSlider.style.height = '100%';
-        //     console.log('opening order modal');
-        // }
-        // function closeOrderSlider() {
-        //     orderSlider.style.display = 'none';
-        //     orderSlider.style.height = '0%';
-        //     console.log('closing order modal');
-        // }
+        function toggleStaffSlider() {
+            var staffSlider = document.getElementById('staff');
+            if (staffSlider.style.display === 'none' || staffSlider.style.display === '') {
+                staffSlider.style.display = 'block';
+                staffSlider.style.animation = 'slideUp 0.4s ease-in-out forwards';
+            } else {
+                staffSlider.style.animation = 'slideDown 0.4s ease-in-out forwards';
+                staffSlider.addEventListener('animationend', function handler() {
+                    staffSlider.style.display = 'none';
+                    staffSlider.removeEventListener('animationend', handler);
+                }, { once: true });
+            }
+        }
 
         function toggleOrderSlider() {
             var orderSlider = document.getElementById('order');
@@ -818,10 +904,6 @@
 
         window.onload = function() {
             console.log('loaded');
-            // fetchItems().then(items => {
-            //     console.log(`Added ${items} to the menu.`)
-            //     populateMenuList(items);
-            // });
         }
     </script>
 </html>
